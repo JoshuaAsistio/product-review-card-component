@@ -1,0 +1,114 @@
+@import url(variables.css);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cream);
+}
+
+.card {
+    width: 600px;
+    min-height: 450px;
+    display: grid;
+    grid-template-columns: 300px 300px;
+    margin-inline: auto;
+    margin-top: 75px;
+    border-radius: 10px;
+}
+
+#product-image {
+    background-image: url('../images/image-product-desktop.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 450px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 10px 0 0 10px;
+}
+
+#description {
+    padding: 35px 33px 0;
+}
+
+#description p:first-of-type:not(div#price > p) {
+    letter-spacing: 5px;
+    color: var(--dark-grayish-blue);
+}
+
+h1 {
+    color: var(--very-dark-blue);
+}
+
+#description p:nth-of-type(2):not(div#price > p) {
+    color: var(--dark-grayish-blue);
+}
+
+.flex {
+    display: flex;
+}
+
+div#price p:first-of-type {
+    font-size: 22px;
+    margin-right: 20px;
+    color: var(--dark-cyan);
+    font-weight: 700;
+}
+
+div#price p:nth-of-type(2) {
+    font-size: 14px;
+    color: var(--dark-grayish-blue);
+    text-decoration: line-through;
+    margin-top: 6px;
+}
+
+button img {
+    height: 15px;
+    width: 15px;
+    margin-right: 10px;
+}
+
+.btn {
+    color: white;
+    background-color: var(--dark-cyan);
+    width: 235px;
+    padding: 5px;
+}
+
+.btn:hover {
+    background-color: var(--hover);
+    color: var(--white);
+}
+
+@media (max-width: 375px) {
+    body {
+        padding-bottom: 27px;
+    }
+
+    .card {
+        width: 343px;
+        min-height: 611px;
+        grid-template-columns: 343px;
+        margin-top: 28px;
+    }
+
+    #product-image {
+        background-image: url('../images/image-product-mobile.jpg');
+        width: 341.4px;
+        min-height: 240px;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .btn {
+        width: 295px;
+        margin-bottom: 24px;
+    }
+
+    #description {
+        padding: 35px 25px;
+    }
+}
